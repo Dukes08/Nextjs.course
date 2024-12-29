@@ -1,23 +1,29 @@
 import React from 'react'
 import Image from 'next/image';
-import { IoBalloon, IoBrowsersOutline, IoCalculator, IoFootball, IoLogoReact } from 'react-icons/io5';
+import { IoBrowsersOutline, IoCalculator, IoFootball, IoHeart, IoLogoReact } from 'react-icons/io5';
 import SidebarMenuItem from './SidebarMenuItem';
 
 const menuItems = [{
-    path:'/dashboard/main',
-    icon:<IoBrowsersOutline width={40}/>,
+    path: '/dashboard/main',
+    icon: <IoBrowsersOutline width={40} />,
     title: 'Dashboard',
     subtitle: 'Visualizacion'
-},{
-    path:'/dashboard/counter',
-    icon:<IoCalculator width={40}/>,
+}, {
+    path: '/dashboard/counter',
+    icon: <IoCalculator width={40} />,
     title: 'Counter',
     subtitle: 'Contador Client Side'
-},{
-    path:'/dashboard/pokemons',
-    icon:<IoFootball width={40}/>,
+}, {
+    path: '/dashboard/pokemons',
+    icon: <IoFootball width={40} />,
     title: 'Pokemons',
     subtitle: 'Generacion estatica'
+}
+    , {
+    path: '/dashboard/favorites',
+    icon: <IoHeart width={40} />,
+    title: 'Favorites',
+    subtitle: 'Global State'
 }]
 
 const Sidebar = () => {
@@ -50,8 +56,8 @@ const Sidebar = () => {
             </div>
             <div id="nav" className="w-full px-6">
                 {
-                    menuItems.map(item=>(
-                        <SidebarMenuItem key={item.path} {...item}/>
+                    menuItems.map(item => (
+                        <SidebarMenuItem key={item.path} {...item} />
                     ))
                 }
             </div>

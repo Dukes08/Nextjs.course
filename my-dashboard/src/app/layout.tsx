@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Providers } from "@/store/Providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,10 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        
-      >
-        {children}
+      <body>
+        {/* importante anadir al provider del redux para que sirva */}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

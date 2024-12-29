@@ -1,8 +1,15 @@
+import { SimpleWidget } from '@/components/dashboard/SimpleWidget'
+import WidgetsGrid from '@/components/dashboard/WidgetsGrid'
 import React from 'react'
 
 const Main = () => {
   return (
-    <div>Main View</div>
+    <>
+      <div className='text-3xl p-2'>Dashboard</div>
+      <span className='p-2'>Información general</span>
+
+      <WidgetsGrid/>
+    </>
   )
 }
 
